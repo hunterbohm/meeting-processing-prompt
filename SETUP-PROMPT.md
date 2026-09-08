@@ -80,7 +80,17 @@ recorder first, then continue.
      you think each belongs to.
    - Questions only I can answer: routing, identity, project, due date.
    End with: "Reply here: yes/no per number, and answers. I file the yeses as
-   tasks." One thread per meeting. Never a plain message, never a DM.
+   tasks." Post the review as a message inside the thread, not just on its
+   parent message. Notify only the recipient confirmed during setup, using
+   the chat tool's supported mention or notification mechanism. Read the
+   posted message back from that thread and verify its content and target.
+   Save the meeting id, thread id, and review message id as delivery evidence.
+
+   One thread per meeting. After a timeout or partial failure, check the
+   saved ids and live chat before retrying. Reuse an existing thread and
+   post only missing content. If delivery is ambiguous, report it as pending
+   rather than sending again. Never a plain message or a DM in place of the
+   review thread.
 
 8. **File only the yeses.** Each yes becomes one task in my task system: the
    commitment verbatim as the title, linked to the meeting and the project,
@@ -94,7 +104,8 @@ recorder first, then continue.
 10. **Receipt, then gate.** Commit each repo you touched with the message
     `meeting: <date> <topic>`. Write one log line in my notes for the vault
     writes. Then run the gate: it checks the note exists with the right
-    sections and status, the thread exists, the client copy exists when the
+    sections and status, the review message is verified in the correct thread
+    with the configured notification target, the client copy exists when the
     meeting is a client meeting, and the log line exists. Only when it prints
     `processed: true` is the meeting done. Then list again. The run ends when
     the list is empty.
@@ -107,7 +118,14 @@ recorder first, then continue.
   listed meeting, oldest first.
 - A calendar sync that pre-creates the meeting note and contact pages before
   the meeting, so filing appends to a note that already exists.
-- Tests for the gate: it must refuse when any piece of evidence is missing.
+- Tests for delivery and the gate: an empty thread, a failed review post,
+  or a failed read-back must prevent completion. Test duplicate triggers
+  and partial failures: retries must reuse the thread and avoid reposting
+  an already-delivered review. A local thread record alone is not proof.
+- Before calling the setup ready, run one user-approved sample through the
+  real trigger, filing, chat delivery, and gate. Verify the review appears
+  inside the thread and ask me to confirm I received its notification.
+  Keep simulated tests distinct from this live check.
 
 ## Interview me before you build
 
@@ -120,6 +138,8 @@ accounts before you ask, so the questions are about what you found there.
 3. Where do my tasks live? Which task system, and how does it link a task to
    a note?
 4. Where do you reach me with questions, and is a thread possible there?
+   Confirm the exact destination and my notification recipient identity
+   from the connected account. How should that tool alert me?
 5. Do I have client work folders? Which ones, and how do you map an attendee
    to one?
 6. What are my own emails and domains, so you never file me as an attendee?

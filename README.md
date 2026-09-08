@@ -30,6 +30,6 @@ If you do not record meetings at all yet, say so. It helps you pick a recorder f
 3. Nothing becomes a task without my yes.
 4. A question gets asked, never guessed.
 5. Every write leaves a receipt. A commit, or a log line.
-6. The run is not done until the gate says so. A plain script, no model in it, checks that every step left its file behind. If one is missing it refuses, names the step, and the meeting stays in the queue.
+6. The run is not done until the gate says so. A plain script, no model in it, checks the files and reads the review message back from the correct chat thread. An empty thread is not delivery. If evidence is missing it refuses, names the step, and the meeting stays in the queue.
 
 Every one of these exists because an agent did the opposite. Tasks that were meant for somebody else. Commitments I never made. The night it wrote the note, stopped halfway, and told me the meeting was processed. Rule six was written at one in the morning after that one.
