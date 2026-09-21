@@ -16,6 +16,8 @@ Nothing becomes a task without my reply. The agent lists what I committed to and
 
 ## Set it up
 
+Watch the walkthrough: [I Automated My Meeting Follow-Up with Hermes](https://www.youtube.com/watch?v=c4MT2CAtMkA).
+
 1. Open your agent (Claude Code, Codex, Hermes, Cursor, whatever you run) on the machine that will do the work.
 2. Paste the whole of `SETUP-PROMPT.md`.
 3. Answer its questions one at a time. It looks at your setup first, so the questions are about what it found.
