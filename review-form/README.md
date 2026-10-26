@@ -1,5 +1,7 @@
 # review-form
 
+*AI-generated README.*
+
 A one-file web form for reviewing a meeting on your phone. Your agent
 publishes one review per meeting. You keep or drop each task, edit its title,
 due date, and note, answer the questions, and submit once. Your scripts read

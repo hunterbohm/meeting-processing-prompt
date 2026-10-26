@@ -1,8 +1,14 @@
 # Automatic meeting processing, the process not the tools
 
+*AI-generated README.*
+
 When a meeting ends, I can walk away from my desk. My agent texts me a link. On my phone I see a short summary, the tasks it thinks I committed to, and anything it could not work out on its own, like which project a task belongs to. I keep or drop each task, fix a title, set a date, answer the questions, and submit. Nothing becomes a task until I do.
 
+![The text with the review link, the review form with one task dropped, and the sent page. Example data.](docs/phone-review.png)
+
 Mine runs on a recorder I built that transcribes every call, an Obsidian vault, TaskNotes, and a Hermes agent on a Mac mini that texts me over iMessage. The form lives on the mini and opens only on my Tailscale network, so my meeting notes never sit on a public page. Yours does not have to use any of these. The process is the part that matters.
+
+![What runs where. The always-on machine files the meeting and publishes the review. Your phone gets the text, and you keep or drop each task. A script with no AI files only the kept tasks.](docs/how-it-runs.png)
 
 This repo gives you two things.
 
