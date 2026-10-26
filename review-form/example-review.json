@@ -1,0 +1,41 @@
+{
+  "meeting": {
+    "title": "Weekly sync with Dana",
+    "date": "2026-10-26",
+    "people": ["Dana Lee", "Sam Ortiz"],
+    "summary": "Scope for the site rebuild is final. Launch moves to November 12 because the copy is late. Sam joins to handle the logo.",
+    "project": "Website rebuild",
+    "note": "Meetings/2026-10-26 1500 Weekly sync with Dana.md"
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Send Dana the revised scope",
+      "detail": "She needs it before Friday's call.",
+      "project": "Website rebuild",
+      "due": "2026-10-30"
+    },
+    {
+      "id": "2",
+      "title": "Move the launch date to November 12 in the plan",
+      "project": "Website rebuild"
+    },
+    {
+      "id": "3",
+      "title": "Share the brand guide with Sam",
+      "detail": "He asked for the fonts and the logo files.",
+      "project": null
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Is the logo work part of Website rebuild or a new project?",
+      "options": ["Website rebuild", "New project"]
+    },
+    {
+      "id": "q2",
+      "text": "Sam is new. Which company is he with?"
+    }
+  ]
+}
